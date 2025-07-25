@@ -3,7 +3,7 @@
 
 <head>
   <link rel="icon" type="image/png" href="/favicon.png"/>
-  <meta charset="utf-8" >
+  <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Thomas Carstens - Research Portfolio</title>
@@ -11,144 +11,628 @@
   <meta content="robotics, thesis, research, drone, crossreality, human-drone interaction" name="keywords">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #12d640;
+      --primary-dark: #0ea832;
+      --bg-dark: #0a0e27;
+      --bg-light: #f8f9fa;
+      --text-light: #6c757d;
+      --text-dark: #2c3e50;
+      --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --border-radius: 12px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007209-3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-169007209-3');
-  </script>
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%);
+      min-height: 100vh;
+    }
 
+    .main-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    /* Header Section */
+    .header-section {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-radius: var(--border-radius);
+      box-shadow: var(--card-shadow);
+    }
+
+    .profile-image {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      display: block;
+      border: 4px solid var(--primary-color);
+      box-shadow: 0 8px 32px rgba(18, 214, 64, 0.3);
+    }
+
+    .header-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text-dark);
+    }
+
+    .header-subtitle {
+      font-size: 1.25rem;
+      color: var(--primary-color);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: var(--transition);
+      font-size: 1.25rem;
+    }
+
+    .social-link:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(18, 214, 64, 0.4);
+      color: white;
+    }
+
+    /* Thesis Section */
+    .thesis-section {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 2.5rem;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 2rem;
+    }
+
+    .thesis-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .thesis-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .thesis-subtitle {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .thesis-focus {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .thesis-intro {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-light);
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+
+    .research-highlight {
+      background: linear-gradient(135deg, rgba(18, 214, 64, 0.1), rgba(14, 168, 50, 0.05));
+      border-left: 4px solid var(--primary-color);
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      font-weight: 500;
+    }
+
+    /* Navigation Grid */
+    .navigation-title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: var(--text-dark);
+    }
+
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .topic-card {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid #e9ecef;
+      transition: var(--transition);
+    }
+
+    .topic-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .topic-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .topic-icon {
+      font-size: 1.25rem;
+      margin-right: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    .topic-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .topic-link {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      background: #f8f9fa;
+      color: var(--text-dark);
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+      border: 1px solid #e9ecef;
+    }
+
+    .topic-link:hover {
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+      color: white;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(18, 214, 64, 0.3);
+      border-color: var(--primary-color);
+    }
+
+    .topic-link i {
+      margin-right: 0.75rem;
+      font-size: 1rem;
+      width: 16px;
+      color: var(--primary-color);
+      transition: var(--transition);
+    }
+
+    .topic-link:hover i {
+      color: white;
+    }
+
+    /* Download Section */
+    .download-section {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, var(--bg-light), white);
+      border-radius: var(--border-radius);
+      border-top: 3px solid var(--primary-color);
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+      color: white;
+      text-decoration: none;
+      border-radius: var(--border-radius);
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: 0 8px 25px rgba(18, 214, 64, 0.3);
+    }
+
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(18, 214, 64, 0.4);
+      color: white;
+    }
+
+    .download-btn i {
+      margin-right: 0.75rem;
+      font-size: 1.25rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .main-container {
+        padding: 1rem 0.5rem;
+      }
+
+      .header-section,
+      .thesis-section {
+        padding: 1.5rem;
+      }
+
+      .header-title {
+        font-size: 2rem;
+      }
+
+      .thesis-title {
+        font-size: 1.75rem;
+      }
+
+      .thesis-subtitle {
+        font-size: 1.25rem;
+      }
+
+      .topics-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .topic-card {
+        padding: 1rem;
+      }
+
+      .social-links {
+        gap: 0.75rem;
+      }
+
+      .social-link {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .profile-image {
+        width: 120px;
+        height: 120px;
+      }
+
+      .header-title {
+        font-size: 1.75rem;
+      }
+
+      .thesis-title {
+        font-size: 1.5rem;
+      }
+
+      .topic-link {
+        font-size: 0.85rem;
+        padding: 0.65rem 0.85rem;
+      }
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Loading animation */
+    .fade-in {
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 
 <body>
-  
-  <!-- ======= Header ======= -->
-  <header id="header" class="header-tops">
-    <div class="container">
-       <img src="assets/img/profile.png" width="200" style="display:block; margin: 0 auto; border-radius: 50px;"/>
-       <div style="text-align: center; margin-top: 20px;">
-         <h1><a href="index.html">Thomas Carstens</a></h1>
-         <h3 style="color: #12d640; margin-top: 10px;">Robotics Research Portfolio</h3>
-       </div>
+  <div class="main-container">
+    <!-- Header Section -->
+    <header class="header-section fade-in">
+      <img src="assets/img/profile.png" alt="Thomas Carstens" class="profile-image">
+      <h1 class="header-title">Thomas Carstens</h1>
+      <p class="header-subtitle">Robotics Research Portfolio</p>
+      
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/thomas-carstens-31632468/" target="_blank" class="social-link" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://github.com/ThomasCarstens" target="_blank" class="social-link" title="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+      </div>
+    </header>
 
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="#header"> <span>Home</span></a></li>
-          <li><a href="https://www.linkedin.com/in/thomas-carstens-31632468/" target="_blank" class="linkedin">| <i class="bx bxl-linkedin"></i></a></li>
-          <li><a href="https://github.com/ThomasCarstens" target="_blank" class="github"><i class="bx bxl-github"></i></a></li>
-        </ul>
-      </nav>
+    <!-- Thesis Section -->
+    <main class="thesis-section fade-in">
+      <div class="thesis-header">
+        <h2 class="thesis-title">Masters Thesis</h2>
+        <h3 class="thesis-subtitle">Intelligent Systems for Next Generation Drone Functionality</h3>
+        <p class="thesis-focus">
+          <strong>Research Focus:</strong> Lab-to-Field Robotics using Human-Drone Interaction and Crossreality
+        </p>
+        <p class="thesis-intro">
+          This thesis explores the development of intelligent systems that enable seamless human-drone collaboration
+          in both laboratory and field environments, investigating crossreality technologies to bridge
+          the gap between controlled lab settings and real-world applications.
+        </p>
+      </div>
 
-      <!-- ======= Thesis Content ======= -->
-      <div class="thesis-content" style="margin-top: 60px;">
-        <div class="section-title">
-          <h2>Masters Thesis</h2>
-          <h3 style="color: #12d640; margin-bottom: 20px;">Intelligent Systems for Next Generation Drone Functionality</h3>
-          <p style="font-size: 1.1em; margin-bottom: 30px;">
-            <strong>Research Focus:</strong> Lab-to-Field Robotics using Human-Drone Interaction and Crossreality
-          </p>
+      <div class="research-highlight">
+        <strong>Key Innovation:</strong> Bridging the gap between controlled laboratory environments and complex real-world deployment through advanced human-drone interaction paradigms and crossreality technologies.
+      </div>
+
+      <h4 class="navigation-title">📚 Explore Thesis Sections</h4>
+
+      <!-- Topics Grid -->
+      <div class="topics-grid">
+        <div class="topic-card">
+          <div class="topic-header">
+            <i class="bi bi-bullseye topic-icon"></i>
+            Research Foundation
+          </div>
+          <div class="topic-links">
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=5" target="_blank" class="topic-link">
+              <i class="bi bi-target"></i> Introduction & Problem Statement
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=7" target="_blank" class="topic-link">
+              <i class="bi bi-list-ul"></i> Research Domains & Scope
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=8" target="_blank" class="topic-link">
+              <i class="bi bi-award"></i> Key Contributions
+            </a>
+          </div>
         </div>
 
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <p style="text-align: center; font-size: 1.05em; margin-bottom: 40px;">
-              This thesis explores the development of intelligent systems that enable seamless human-drone collaboration
-              in both laboratory and field environments, investigating crossreality technologies to bridge
-              the gap between controlled lab settings and real-world applications.
-            </p>
+        <div class="topic-card">
+          <div class="topic-header">
+            <i class="bi bi-building topic-icon"></i>
+            Testbed Architecture
+          </div>
+          <div class="topic-links">
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=12" target="_blank" class="topic-link">
+              <i class="bi bi-diagram-3"></i> System Overview & Design
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=17" target="_blank" class="topic-link">
+              <i class="bi bi-cpu"></i> Hardware Environment Setup
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=17" target="_blank" class="topic-link">
+              <i class="bi bi-geo-alt"></i> Flight Arena & Localization
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=18" target="_blank" class="topic-link">
+              <i class="bi bi-graph-up"></i> Coverage & Stability Analysis
+            </a>
+          </div>
+        </div>
 
-            <div class="thesis-navigation">
-              <h5>Navigate to Thesis Sections:</h5>
+        <div class="topic-card">
+          <div class="topic-header">
+            <i class="bi bi-code-slash topic-icon"></i>
+            Software Ecosystem
+          </div>
+          <div class="topic-links">
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=22" target="_blank" class="topic-link">
+              <i class="bi bi-diagram-2"></i> Software Architecture
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=23" target="_blank" class="topic-link">
+              <i class="bi bi-layers"></i> Middleware Solutions
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=23" target="_blank" class="topic-link">
+              <i class="bi bi-box"></i> Object Virtualization
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=23" target="_blank" class="topic-link">
+              <i class="bi bi-people"></i> Swarm Management
+            </a>
+          </div>
+        </div>
 
-              <!-- Main Chapters -->
-              <div class="row">
-                <div class="col-md-4">
-                  <h6 style="color: #12d640; margin-bottom: 15px;">Main Chapters</h6>
-                  <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=5" target="_blank" class="btn btn-primary btn-thesis-nav">
-                    <i class="bx bx-file-blank"></i> Introduction
-                  </a>
-                  <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=12" target="_blank" class="btn btn-primary btn-thesis-nav">
-                    <i class="bx bx-cog"></i> Testbed Environment
-                  </a>
-                  <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=35" target="_blank" class="btn btn-primary btn-thesis-nav">
-                    <i class="bx bx-hand-index"></i> Human-Drone Interfaces
-                  </a>
-                  <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=58" target="_blank" class="btn btn-primary btn-thesis-nav">
-                    <i class="bx bx-building"></i> Industrial Deployment
-                  </a>
-                  <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=81" target="_blank" class="btn btn-primary btn-thesis-nav">
-                    <i class="bx bx-check-circle"></i> Conclusion
-                  </a>
-                </div>
+        <div class="topic-card">
+          <div class="topic-header">
+            <i class="bi bi-controller topic-icon"></i>
+            Human-Drone Interfaces
+          </div>
+          <div class="topic-links">
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=35" target="_blank" class="topic-link">
+              <i class="bi bi-hand-index"></i> Gesture Control Systems
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=39" target="_blank" class="topic-link">
+              <i class="bi bi-camera"></i> Computer Vision Pipeline
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=40" target="_blank" class="topic-link">
+              <i class="bi bi-person-arms-up"></i> Pose Recognition Algorithms
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=42" target="_blank" class="topic-link">
+              <i class="bi bi-bar-chart"></i> Performance Analysis
+            </a>
+          </div>
+        </div>
 
-                <div class="col-md-4">
-                  <h6 style="color: #12d640; margin-bottom: 15px;">Testbed Development</h6>
-                  <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=7" target="_blank" class="btn btn-primary btn-thesis-nav">
-                    <i class="bx bx-list-ul"></i> Problem Statement
-                  </a>
-                  <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=17" target="_blank" class="btn btn-primary btn-thesis-nav">
-                    <i class="bx bx-chip"></i> Hardware Environment
-                  </a>
-                  <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=22" target="_blank" class="btn btn-primary btn-thesis-nav">
-                    <i class="bx bx-code-alt"></i> Software Environment
-                  </a>
-                </div>
+        <div class="topic-card">
+          <div class="topic-header">
+            <i class="bi bi-headset-vr topic-icon"></i>
+            Mixed Reality Systems
+          </div>
+          <div class="topic-links">
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=48" target="_blank" class="topic-link">
+              <i class="bi bi-display"></i> MR Interface Design
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=49" target="_blank" class="topic-link">
+              <i class="bi bi-diagram-3"></i> Network Architecture
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=50" target="_blank" class="topic-link">
+              <i class="bi bi-arrow-left-right"></i> Event Sharing Workflow
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=51" target="_blank" class="topic-link">
+              <i class="bi bi-speedometer2"></i> MR Performance Testing
+            </a>
+          </div>
+        </div>
 
-                <div class="col-md-4">
-                  <h6 style="color: #12d640; margin-bottom: 15px;">Industrial Applications</h6>
-                  <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=60" target="_blank" class="btn btn-primary btn-thesis-nav">
-                    <i class="bx bx-drone"></i> Carrier Drone Design
-                  </a>
-                  <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=67" target="_blank" class="btn btn-primary btn-thesis-nav">
-                    <i class="bx bx-scan"></i> Semi-autonomous Scan
-                  </a>
-                  <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=72" target="_blank" class="btn btn-primary btn-thesis-nav">
-                    <i class="bx bx-pulse"></i> Structural Inspection
-                  </a>
-                </div>
-              </div>
+        <div class="topic-card">
+          <div class="topic-header">
+            <i class="bi bi-factory topic-icon"></i>
+            Industrial Deployment
+          </div>
+          <div class="topic-links">
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=58" target="_blank" class="topic-link">
+              <i class="bi bi-rocket-takeoff"></i> In Vivo Applications
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=60" target="_blank" class="topic-link">
+              <i class="bi bi-airplane"></i> Carrier Drone Engineering
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=61" target="_blank" class="topic-link">
+              <i class="bi bi-gear"></i> Onboard Components
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=64" target="_blank" class="topic-link">
+              <i class="bi bi-graph-up-arrow"></i> Damping Optimization
+            </a>
+          </div>
+        </div>
 
-              <div class="full-thesis-link">
-                <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf" target="_blank" class="btn btn-primary btn-lg">
-                  <i class="bx bx-download"></i> View Full Thesis (PDF)
-                </a>
-              </div>
-            </div>
+        <div class="topic-card">
+          <div class="topic-header">
+            <i class="bi bi-radar topic-icon"></i>
+            Sensing & Inspection
+          </div>
+          <div class="topic-links">
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=67" target="_blank" class="topic-link">
+              <i class="bi bi-scan"></i> Semi-Autonomous Scanning
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=67" target="_blank" class="topic-link">
+              <i class="bi bi-database"></i> Data Acquisition Systems
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=72" target="_blank" class="topic-link">
+              <i class="bi bi-activity"></i> Vibration Analysis
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=74" target="_blank" class="topic-link">
+              <i class="bi bi-footprints"></i> Footstep Detection
+            </a>
+          </div>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-header">
+            <i class="bi bi-play-circle topic-icon"></i>
+            Demonstrations
+          </div>
+          <div class="topic-links">
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=29" target="_blank" class="topic-link">
+              <i class="bi bi-music-note-beamed"></i> Choreography Design
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=31" target="_blank" class="topic-link">
+              <i class="bi bi-play-fill"></i> Testbed Results
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=68" target="_blank" class="topic-link">
+              <i class="bi bi-check-circle"></i> Sensor Evaluation
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=76" target="_blank" class="topic-link">
+              <i class="bi bi-graph-down"></i> Sensitivity Analysis
+            </a>
+          </div>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-header">
+            <i class="bi bi-lightbulb topic-icon"></i>
+            Conclusions & Impact
+          </div>
+          <div class="topic-links">
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=81" target="_blank" class="topic-link">
+              <i class="bi bi-check-all"></i> Research Conclusions
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=82" target="_blank" class="topic-link">
+              <i class="bi bi-arrow-up-right"></i> Future Directions
+            </a>
+            <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf#page=84" target="_blank" class="topic-link">
+              <i class="bi bi-heart"></i> Acknowledgements
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </header><!-- End Header -->
 
+      <!-- Download Section -->
+      <div class="download-section">
+        <a href="assets/pdfs/Proceeding-2021-AL-1.2-pages-128-211.pdf" target="_blank" class="download-btn">
+          <i class="bi bi-download"></i>
+          Download Complete Thesis (PDF)
+        </a>
+      </div>
+    </main>
+  </div>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script>
+    // Add smooth fade-in animation for elements
+    document.addEventListener('DOMContentLoaded', function() {
+      const elements = document.querySelectorAll('.fade-in');
+      elements.forEach((el, index) => {
+        setTimeout(() => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, index * 200);
+      });
+    });
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+    // Add hover effects and interactions
+    document.querySelectorAll('.topic-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-4px)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+  </script>
 </body>
 </html>
