@@ -17,6 +17,86 @@
     color: #FFFFFF;
 
 }
+
+/*--------------------------------------------------------------
+# Thesis Section Styles
+--------------------------------------------------------------*/
+.thesis {
+  padding: 80px 0;
+}
+
+.thesis-content {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.thesis-navigation {
+  margin-top: 40px;
+}
+
+.thesis-navigation h5 {
+  color: #12d640;
+  margin-bottom: 30px;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.thesis-navigation h6 {
+  color: #12d640;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: 600;
+}
+
+.btn-thesis {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px 20px;
+  background: linear-gradient(45deg, #12d640, #0ea832);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: none;
+  font-weight: 500;
+}
+
+.btn-thesis:hover {
+  background: linear-gradient(45deg, #0ea832, #12d640);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(18, 214, 64, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+.btn-thesis i {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.full-thesis-link {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.full-thesis-link .btn {
+  padding: 15px 30px;
+  font-size: 1.1em;
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.full-thesis-link .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
