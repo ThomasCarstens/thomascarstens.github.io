@@ -185,5 +185,214 @@
       "New application domains",
       "Long-term research roadmap"
     ]
+  },
+  "flightArenaLocalization": {
+    "title": "Flight Arena & Localization",
+    "page": 17,
+    "summary": "Details the design and implementation of the flight arena with precise spatial localization systems for accurate drone positioning and tracking.",
+    "keyPoints": [
+      "Arena design specifications",
+      "Spatial localization accuracy",
+      "Tracking system implementation",
+      "Safety considerations and boundaries"
+    ]
+  },
+  "coverageStabilityAnalysis": {
+    "title": "Coverage & Stability Analysis",
+    "page": 18,
+    "summary": "Analyzes the coverage patterns and flight stability characteristics of the drone systems within the testbed environment.",
+    "keyPoints": [
+      "Coverage pattern optimization",
+      "Flight stability metrics",
+      "Performance under various conditions",
+      "System reliability assessment"
+    ]
+  },
+  "middlewareSolutions": {
+    "title": "Middleware Solutions",
+    "page": 23,
+    "summary": "Explores the middleware architecture that enables seamless communication between different system components and drone platforms.",
+    "keyPoints": [
+      "Inter-component communication protocols",
+      "Real-time data exchange mechanisms",
+      "Platform-agnostic interfaces",
+      "Scalability and modularity features"
+    ]
+  },
+  "objectVirtualization": {
+    "title": "Object Virtualization",
+    "page": 23,
+    "summary": "Describes the virtualization techniques used to create digital representations of physical drone objects for simulation and testing.",
+    "keyPoints": [
+      "Virtual object modeling approaches",
+      "Real-time synchronization methods",
+      "Physics simulation integration",
+      "Virtual-physical mapping accuracy"
+    ]
+  },
+  "swarmManagement": {
+    "title": "Swarm Management",
+    "page": 23,
+    "summary": "Presents the swarm management layer that coordinates multiple drone operations and ensures collision-free collaborative behaviors.",
+    "keyPoints": [
+      "Multi-drone coordination algorithms",
+      "Collision avoidance strategies",
+      "Task allocation mechanisms",
+      "Swarm behavior optimization"
+    ]
+  },
+  "computerVisionPipeline": {
+    "title": "Computer Vision Pipeline",
+    "page": 39,
+    "summary": "Details the computer vision processing pipeline used for gesture recognition and human pose detection in drone control systems.",
+    "keyPoints": [
+      "Image processing algorithms",
+      "Feature extraction methods",
+      "Real-time processing optimization",
+      "Accuracy and performance metrics"
+    ]
+  },
+  "poseRecognitionAlgorithms": {
+    "title": "Pose Recognition Algorithms",
+    "page": 40,
+    "summary": "Explores the algorithms and techniques used for recognizing human poses and gestures for intuitive drone control interfaces.",
+    "keyPoints": [
+      "Pose detection methodologies",
+      "Gesture classification algorithms",
+      "Machine learning approaches",
+      "Real-time recognition performance"
+    ]
+  },
+  "performanceAnalysis": {
+    "title": "Performance Analysis",
+    "page": 42,
+    "summary": "Provides comprehensive performance analysis of the human-drone interaction systems, including accuracy, latency, and user experience metrics.",
+    "keyPoints": [
+      "System response time analysis",
+      "Accuracy measurement protocols",
+      "User experience evaluation",
+      "Comparative performance studies"
+    ]
+  },
+  "networkArchitecture": {
+    "title": "Network Architecture",
+    "page": 49,
+    "summary": "Describes the network architecture that enables real-time communication between mixed reality interfaces and drone systems.",
+    "keyPoints": [
+      "Network topology design",
+      "Communication protocol selection",
+      "Latency optimization strategies",
+      "Bandwidth management techniques"
+    ]
+  },
+  "eventSharingWorkflow": {
+    "title": "Event Sharing Workflow",
+    "page": 50,
+    "summary": "Details the workflow for sharing events and data between different components of the mixed reality drone control system.",
+    "keyPoints": [
+      "Event propagation mechanisms",
+      "Data synchronization protocols",
+      "Workflow optimization strategies",
+      "Error handling and recovery"
+    ]
+  },
+  "mrPerformanceTesting": {
+    "title": "MR Performance Testing",
+    "page": 51,
+    "summary": "Evaluates the performance characteristics of mixed reality interfaces in drone control applications, including latency and user experience metrics.",
+    "keyPoints": [
+      "Performance benchmarking methods",
+      "Latency measurement protocols",
+      "User experience evaluation",
+      "System optimization results"
+    ]
+  },
+  "onboardComponents": {
+    "title": "Onboard Components",
+    "page": 61,
+    "summary": "Details the selection and integration of onboard components for the carrier drone system, including sensors, processors, and communication modules.",
+    "keyPoints": [
+      "Component selection criteria",
+      "Integration challenges and solutions",
+      "Power management considerations",
+      "Performance optimization strategies"
+    ]
+  },
+  "dampingOptimization": {
+    "title": "Damping Optimization",
+    "page": 64,
+    "summary": "Explores optimization techniques for reducing vibrations and improving stability in carrier drone operations through advanced damping systems.",
+    "keyPoints": [
+      "Vibration analysis methodologies",
+      "Damping system design principles",
+      "Optimization algorithms and results",
+      "Performance improvement metrics"
+    ]
+  },
+  "dataAcquisitionSystems": {
+    "title": "Data Acquisition Systems",
+    "page": 67,
+    "summary": "Describes the design and implementation of data acquisition systems for collecting sensor data during autonomous scanning operations.",
+    "keyPoints": [
+      "Sensor integration strategies",
+      "Data collection protocols",
+      "Real-time processing capabilities",
+      "Storage and transmission systems"
+    ]
+  },
+  "footstepDetection": {
+    "title": "Footstep Detection",
+    "page": 74,
+    "summary": "Presents experiments and methodologies for detecting human footsteps using drone-mounted vibration sensors for structural monitoring applications.",
+    "keyPoints": [
+      "Vibration sensor calibration",
+      "Signal processing techniques",
+      "Detection accuracy metrics",
+      "Real-world validation results"
+    ]
+  },
+  "testbedResults": {
+    "title": "Testbed Results",
+    "page": 31,
+    "summary": "Presents the experimental results and validation outcomes from the testbed environment, demonstrating system capabilities and performance.",
+    "keyPoints": [
+      "Experimental validation protocols",
+      "Performance measurement results",
+      "System capability demonstrations",
+      "Comparative analysis with existing systems"
+    ]
+  },
+  "sensorEvaluation": {
+    "title": "Sensor Evaluation",
+    "page": 68,
+    "summary": "Evaluates the performance and accuracy of various sensors used in the drone systems for different monitoring and inspection applications.",
+    "keyPoints": [
+      "Sensor performance benchmarking",
+      "Accuracy and precision analysis",
+      "Environmental impact assessment",
+      "Calibration and maintenance protocols"
+    ]
+  },
+  "sensitivityAnalysis": {
+    "title": "Sensitivity Analysis",
+    "page": 76,
+    "summary": "Conducts sensitivity analysis of the sensor systems to determine detection thresholds and optimal operating parameters.",
+    "keyPoints": [
+      "Sensitivity threshold determination",
+      "Parameter optimization studies",
+      "Noise analysis and filtering",
+      "Performance under varying conditions"
+    ]
+  },
+  "acknowledgements": {
+    "title": "Acknowledgements",
+    "page": 84,
+    "summary": "Acknowledges the contributions of advisors, collaborators, institutions, and funding sources that made this research possible.",
+    "keyPoints": [
+      "Research advisor contributions",
+      "Institutional support recognition",
+      "Funding source acknowledgment",
+      "Collaborative partner appreciation"
+    ]
   }
 }
